@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon" />
+    <script src="./script.js"></script>
+    <title>carrotOrange</title>
+  </head>
+  <body>
+    <header id="header">
+      <h1 id="title">carrotOrange</h1>
+      <section id="options">
+        <label for="radius-range"
+          >pen width:<input
+            type="range"
+            id="pen-range"
+            min="5"
+            max="60"
+            value="10"
+          /><span id="pen-number">10</span></label
+        >
+        <label for="pen-color"
+          >pen color:<input type="color" id="pen-color" value="#ff471a"
+        /></label>
+        <label for="bg-color"
+          >background color:<input type="color" id="bg-color" value="#48fbfe"
+        /></label>
+        <button id="eraser"><img src="./eraser.png" alt="eraser" /></button>
+        <button id="background">
+          <img src="./background.png" alt="background" />
+        </button>
+      </section>
+    </header>
+    <canvas id="canvas"></canvas>
+  </body>
+</html>

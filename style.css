@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gochi Hand", cursive;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body #header {
+  position: absolute;
+  width: 100vw;
+  height: 12vh;
+}
+body #header #title {
+  position: absolute;
+  right: 2vw;
+  top: 2vh;
+  font-size: 3vw;
+  color: transparent;
+  background-image: linear-gradient(23deg, #ff471a, #f98110, #f9c610, transparent);
+  background-size: 200%;
+  background-position: bottom right;
+  -webkit-background-clip: text;
+  -webkit-animation: bgMove 10s linear alternate infinite;
+          animation: bgMove 10s linear alternate infinite;
+}
+@-webkit-keyframes bgMove {
+  to {
+    background-position: top left;
+  }
+}
+@keyframes bgMove {
+  to {
+    background-position: top left;
+  }
+}
+body #header #options {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1vmax;
+}
+body #header #options label {
+  font-size: 1.5vw;
+  margin: 0.5vmax;
+  color: transparent;
+  background-image: linear-gradient(23deg, #ff471a, #f98110, #f9c610, transparent);
+  background-size: 200%;
+  background-position: bottom right;
+  -webkit-background-clip: text;
+  -webkit-animation: bgMove 10s linear alternate infinite;
+          animation: bgMove 10s linear alternate infinite;
+}
+body #header #options label #pen-range {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0.5vmax;
+  background-color: transparent;
+}
+body #header #options label #pen-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0.8vmax;
+  border-radius: 1vmax;
+  background-color: #ff471a;
+}
+body #header #options label #pen-range::-webkit-slider-thumb {
+  height: 2vmax;
+  width: 2vmax;
+  translate: 0 -0.5vmax;
+  border-radius: 50%;
+  background-image: linear-gradient(23deg, #ff471a, #f98110, #f9c610, transparent);
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+body #header #options label #pen-color, body #header #options label #bg-color {
+  background-color: transparent;
+  border: none;
+  margin: 0.5vmax;
+}
+@keyframes bgMove {
+  to {
+    background-position: top left;
+  }
+}
+body #header #options button {
+  margin: 0.5vmax;
+  border: none;
+  background-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+body #canvas {
+  border: 2px solid #ff471a;
+  border-radius: 1vmax;
+}/*# sourceMappingURL=style.css.map */

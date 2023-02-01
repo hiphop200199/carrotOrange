@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gochi Hand', cursive;
+}
+$textBg:linear-gradient(23deg,#ff471a,#f98110,#f9c610,transparent);
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+& #header{
+    position: absolute;
+    width: 100vw;
+    height: 12vh;
+    & #title{
+        position: absolute;
+        right: 2vw;
+        top: 2vh;
+        font-size: 3vw;
+        color: transparent;
+        background-image: $textBg;
+        background-size: 200%;
+        background-position: bottom right;
+        -webkit-background-clip: text;
+        animation: bgMove 10s linear alternate infinite;
+        @keyframes bgMove {
+            to{background-position: top left;}
+        }
+    }
+    & #options{
+        height: 100%;
+        width: 90%;
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        padding: 1vmax;
+        & label{
+            font-size: 1.5vw;
+            margin: 0.5vmax;
+            color: transparent;
+            background-image: $textBg;
+            background-size: 200%;
+            background-position: bottom right;
+            -webkit-background-clip: text;
+            animation: bgMove 10s linear alternate infinite;
+            & #pen-range{
+                appearance: none;
+                margin: 0.5vmax;
+                background-color: transparent;
+                &::-webkit-slider-runnable-track{
+                    width: 100%;
+                  height: 0.8vmax;
+                  border-radius: 1vmax;
+                  background-color: #ff471a;
+                 
+                }
+                &::-webkit-slider-thumb{
+                    height: 2vmax;
+                  width: 2vmax;
+                  translate: 0 -0.5vmax;
+                  border-radius: 50%;
+                 background-image: $textBg;
+                  cursor: pointer;
+                 -webkit-appearance: none;
+                }
+            }
+            & #pen-color,#bg-color{
+                background-color: transparent;
+               border: none;
+               margin: 0.5vmax;
+            }   
+               
+            @keyframes bgMove {
+                to{background-position: top left;}
+            }
+        }
+        & button{
+            margin: 0.5vmax;
+            border: none;
+            background-color: transparent;
+            user-select: none;
+            cursor: pointer;
+        }
+    }
+}
+& #canvas{
+    border: 2px solid #ff471a;
+    border-radius: 1vmax;
+}
+}
