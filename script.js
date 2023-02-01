@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded",function(){
         context.fillRect(0,0,window.innerWidth,window.innerHeight);
     })
     //設定畫布的範圍、邊框
+    canvas.width=window.innerWidth;
+    canvas.height=window.innerHeight;
+    //縮放時調整比例
     window.addEventListener("resize",function(){
         canvas.width=window.innerWidth;
         canvas.height=window.innerHeight;
